@@ -1,0 +1,19 @@
+__pycache__/
+  *.pyc
+  .venv/
+  venv/
+  *.egg-info/
+  .env
+  .env.local
+  .env.production
+  node_modules/
+  dist/
+  build/
+  .DS_Store
+  Thumbs.db
+  desktop.ini
+  .vscode/settings.json
+  data\uploads\
+  .claude\session_snapshot.md
+.env
+.env.local
