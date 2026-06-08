@@ -52,48 +52,48 @@
 
 ### 0.1 — Create accounts
 
-- [ ] **0.1.1** GitHub — github.com (create if needed)
-- [ ] **0.1.2** Supabase — supabase.com (free account)
-- [ ] **0.1.3** Anthropic Console — **console.anthropic.com**
+- [x] **0.1.1** GitHub — github.com (create if needed)
+- [x] **0.1.2** Supabase — supabase.com (free account)
+- [x] **0.1.3** Anthropic Console — **console.anthropic.com**
   - ⚠️ This is NOT your claude.ai login — it is a separate account for API access only
-- [ ] **0.1.4** Anthropic Console → Billing → Add $5 credit
-- [ ] **0.1.5** OpenAI — platform.openai.com → add $5 credit (for embeddings only)
-- [ ] **0.1.6** Render — render.com (free, for backend hosting)
-- [ ] **0.1.7** Vercel — vercel.com (free, for frontend hosting)
-- [ ] **0.1.8** Loom — loom.com (free, for demo video)
+- [x] **0.1.4** Anthropic Console → Billing → Add $5 credit
+- [x] **0.1.5** OpenAI — platform.openai.com → add $5 credit (for embeddings only)
+- [x] **0.1.6** Render — render.com (free, for backend hosting)
+- [x] **0.1.7** Vercel — vercel.com (free, for frontend hosting)
+- [x] **0.1.8** Loom — loom.com (free, for demo video)
 
 ### 0.2 — Collect API keys (save in password manager)
 
-- [ ] **0.2.1** Anthropic Console → API Keys → Create key → save it
-- [ ] **0.2.2** OpenAI → API Keys → Create key → save it
-- [ ] **0.2.3** Supabase → your project → Settings → API → copy URL and anon key
+- [x] **0.2.1** Anthropic Console → API Keys → Create key → save it
+- [x] **0.2.2** OpenAI → API Keys → Create key → save it
+- [x] **0.2.3** Supabase → your project → Settings → API → copy URL and anon key
 
 ### 0.3 — Install software (open PowerShell as Administrator)
 
-- [ ] **0.3.1** Node.js 18+ LTS from nodejs.org
+- [x] **0.3.1** Node.js 18+ LTS from nodejs.org
   ```powershell
   node --version   # must show v18.x or higher
   npm --version
   ```
-- [ ] **0.3.2** Python 3.11 from python.org
+- [x] **0.3.2** Python 3.11 from python.org
   - ✅ Check "Add Python to PATH" during install
   ```powershell
   python --version   # must show 3.11.x
   ```
-- [ ] **0.3.3** Git from git-scm.com
+- [x] **0.3.3** Git from git-scm.com
   ```powershell
   git --version
   git config --global user.name "Your Name"
   git config --global user.email "your@email.com"
   ```
-- [ ] **0.3.4** VS Code from code.visualstudio.com
-- [ ] **0.3.5** Claude Code
+- [x] **0.3.4** VS Code from code.visualstudio.com
+- [x] **0.3.5** Claude Code
   ```powershell
   npm install -g @anthropic-ai/claude-code
   claude --version
   claude   # follow login prompts — uses your Claude Pro account
   ```
-- [ ] **0.3.6** VS Code Extensions (search in Extensions tab):
+- [x] **0.3.6** VS Code Extensions (search in Extensions tab):
   - `ms-python.python`
   - `ms-python.pylance`
   - `dsznajder.es7-react-js-snippets`
@@ -108,7 +108,7 @@
 
 ### 1.1 — Create project folder
 
-- [ ] **1.1.1**
+- [x] **1.1.1**
   ```powershell
   cd C:\Projects
   mkdir docubot
@@ -125,8 +125,8 @@
 
 ### 1.2 — GitHub repository
 
-- [ ] **1.2.1** github.com → New repository → name: `docubot` → Public → no README init
-- [ ] **1.2.2**
+- [x] **1.2.1** github.com → New repository → name: `docubot` → Public → no README init
+- [x] **1.2.2**
   ```powershell
   git init
   git remote add origin https://github.com/YOUR_USERNAME/docubot.git
@@ -134,7 +134,7 @@
 
 ### 1.3 — .gitignore
 
-- [ ] **1.3.1** Create `docubot\.gitignore`:
+- [x] **1.3.1** Create `docubot\.gitignore`:
   ```
   __pycache__/
   *.pyc
@@ -157,8 +157,8 @@
 
 ### 1.4 — Create CLAUDE.md
 
-- [ ] **1.4.1** Create `docubot\CLAUDE.md` — paste the full content from **Section 6** of the Master Plan v3
-- [ ] **1.4.2** Verify: open Claude Code (`claude` in terminal) → it should acknowledge the project context in its first response
+- [x] **1.4.1** Create `docubot\CLAUDE.md` — paste the full content from **Section 6** of the Master Plan v3
+- [x] **1.4.2** Verify: open Claude Code (`claude` in terminal) → it should acknowledge the project context in its first response
 
 ### 1.5 — Create AGENTS.md
 
@@ -166,7 +166,7 @@
 
 ### 1.6 — Create all slash command agent files
 
-- [ ] **1.6.1** Create each file:
+- [x] **1.6.1** Create each file:
   ```powershell
   # Run in docubot\ folder
   $agents = @("spec","eval","code","review","test","secure",
@@ -193,7 +193,7 @@
 
 ### 1.7 — Create context files
 
-- [ ] **1.7.1** Create each file:
+- [x] **1.7.1** Create each file:
   ```powershell
   $contexts = @("python-standards","rag-patterns","security-rules",
                 "react-standards","test-patterns")
@@ -201,48 +201,56 @@
       New-Item ".claude\context\$c.md" -Force
   }
   ```
-- [ ] **1.7.2** Paste content from the **Context Files** section of Master Plan v3 into each file
+- [x] **1.7.2** Paste content from the **Context Files** section of Master Plan v3 into each file
 
 ### 1.8 — Verify agents work
 
-- [ ] **1.8.1** Start Claude Code:
+- [x] **1.8.1** Start Claude Code:
   ```powershell
   claude
   ```
-- [ ] **1.8.2** Type `/` — you should see all 14 slash commands in autocomplete
-- [ ] **1.8.3** Test one: type `/spec test feature` — should generate a spec structure
-progress on 8 Jun 2026
-- [ ] **1.8.4** Test context loading: type `@CLAUDE.md` — Claude should describe the project back to you
+- [x] **1.8.2** Type `/` — you should see all 14 slash commands in autocomplete
+- [x] **1.8.3** Test one: type `/spec test feature` — should generate a spec structure
+- [x] **1.8.4** Test context loading: type `@CLAUDE.md` — Claude should describe the project back to you
 
 ### 1.9 — First commit
 
-- [ ] **1.9.1**
+- [x] **1.9.1**
   ```powershell
   git add .
   git commit -m "chore: project structure, CLAUDE.md, AGENTS.md, all agents and context files"
   git push -u origin main
   ```
-- [ ] **1.9.2** Verify files appear on github.com/YOUR_USERNAME/docubot
+- [x] **1.9.2** Verify files appear on github.com/YOUR_USERNAME/docubot
 
 ---
 
 ## SECTION 2 — Python Environment
-> **Where:** VS Code terminal
+> **Where:** VS Code terminal (Ctrl+`)
 > **Time:** 30–45 minutes
 
 ### 2.1 — Virtual environment
 
-- [ ] **2.1.1**
+- [x] **2.1.1** Navigate and create venv:
   ```powershell
-  cd docubot\backend
+  cd C:\Projects\docubot\backend
   python -m venv .venv
-  .venv\Scripts\activate
-  # Prompt should now show (.venv)
   ```
+- [x] **2.1.2** Activate it:
+  ```powershell
+  .venv\Scripts\activate
+  # Prompt must show (.venv) before continuing
+  ```
+- [x] **2.1.3** If activation is blocked by PowerShell, run this once then retry 2.1.2:
+  ```powershell
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  ```
+
+> ⚠️ **Every new terminal session:** venv deactivates when VS Code closes. Always run `.venv\Scripts\activate` first before any Python work. `ModuleNotFoundError` later = venv not active.
 
 ### 2.2 — Dependencies
 
-- [ ] **2.2.1** Create `backend\requirements.txt`:
+- [x] **2.2.1** Create `backend\requirements.txt`:
   ```
   fastapi==0.111.0
   uvicorn[standard]==0.29.0
@@ -263,15 +271,19 @@ progress on 8 Jun 2026
   pytest==8.2.0
   pytest-asyncio==0.23.6
   ```
-- [ ] **2.2.2**
+- [x] **2.2.2** Install (confirm `(.venv)` is showing first):
   ```powershell
   pip install -r requirements.txt
+  ```
+- [ ] **2.2.3** Verify all packages:
+  ```powershell
   python -c "import fastapi, anthropic, openai, supabase; print('All packages OK')"
+  # Must print: All packages OK
   ```
 
 ### 2.3 — Environment variables
 
-- [ ] **2.3.1** Create `backend\.env` (real keys — NOT in git):
+- [x] **2.3.1** Create `backend\.env` (real keys — NOT in git):
   ```
   ANTHROPIC_API_KEY=sk-ant-your-key-here
   OPENAI_API_KEY=sk-your-key-here
@@ -283,7 +295,7 @@ progress on 8 Jun 2026
   CHUNK_OVERLAP=50
   TOP_K_RESULTS=5
   ```
-- [ ] **2.3.2** Create `backend\.env.example` (safe for git — no real values):
+- [x] **2.3.2** Create `backend\.env.example` (safe for git — no real values):
   ```
   ANTHROPIC_API_KEY=your-anthropic-api-key-from-console.anthropic.com
   OPENAI_API_KEY=your-openai-api-key
@@ -296,24 +308,33 @@ progress on 8 Jun 2026
   TOP_K_RESULTS=5
   ```
 
-### 2.4 — API connection tests
+### 2.4 — Sanity check before API tests
 
-- [ ] **2.4.1** In Claude Code terminal:
+- [x] **2.4.1** Confirm Python is running from inside venv:
+  ```powershell
+  where.exe python
+  # Must show: C:\Projects\docubot\backend\.venv\Scripts\python.exe
+  # If it shows any other path — run .venv\Scripts\activate and check again
+  ```
+
+### 2.5 — API connection tests
+
+- [x] **2.5.1** In Claude Code terminal:
   ```
   /code create backend/test_connections.py — test Claude API connection, OpenAI embeddings API, and Supabase connection. Print PASS or FAIL clearly for each. Load keys from .env using python-dotenv.
   ```
-- [ ] **2.4.2**
+- [x] **2.5.2**
   ```powershell
   python test_connections.py
   # All three must print PASS
   ```
-- [ ] **2.4.3** Commit:
+- [x] **2.5.3** Commit:
   ```powershell
   git add .env.example requirements.txt test_connections.py
   git commit -m "chore: Python env, requirements, API connection tests"
   git push
   ```
-- [ ] **2.4.4** `/log` — update CLAUDE.md
+- [x] **2.5.4** `/log` — update CLAUDE.md
 
 ---
 
@@ -746,8 +767,8 @@ After going live, check these every week:
 
 | Section | Description | Status | Date Done |
 |---|---|---|---|
-| Section 0 | Accounts & prerequisites | ⬜ | — |
-| Section 1 | Folder, repo, all agents | ⬜ | — |
+| Section 0 | Accounts & prerequisites | ✅ | 2026-06-03 |
+| Section 1 | Folder, repo, all agents | ✅ | 2026-06-03 |
 | Section 2 | Python environment | ⬜ | — |
 | Section 3 | Database setup | ⬜ | — |
 | Section 4 | FastAPI skeleton | ⬜ | — |
@@ -770,6 +791,7 @@ After going live, check these every week:
 | v1.0 | 2026-06-03 | Initial checklist |
 | v2.0 | 2026-06-03 | Windows 11/terminal only, Ruflo integrated |
 | v3.0 | 2026-06-03 | Ruflo removed (security confirmed), native agent system: CLAUDE.md + AGENTS.md + 14 slash commands + 5 context files + /compact token saving |
+| v3.1 | 2026-06-08 | Section 2 expanded: venv activation steps split out, PowerShell fix added, sanity check added (2.4), API tests renumbered to 2.5, chat text removed |
 
 ---
 *Windows 11 · VS Code · Claude Code terminal only · 14 native agents · Zero third-party orchestrators*

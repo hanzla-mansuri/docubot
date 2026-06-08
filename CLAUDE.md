@@ -9,10 +9,10 @@ Pure native agent system — no external orchestrators.
 
 ## Current status
 [UPDATE WITH /log AT END OF EVERY SESSION]
-- Phase: 0 — Setup
-- Last completed: initial folder structure
-- Next task: Python environment and connection tests
-- Blocking issues: none
+- Phase: 1 — Section 2 complete
+- Last completed: Python 3.11 venv (backend\.venv), all packages installed, all 3 APIs PASS. Committed & pushed.
+- Next task: Section 3 — Supabase database setup in browser
+- Blocking issues: backend/.env.example not yet created — do this alongside Section 3
 
 ## Architecture in one paragraph
 FastAPI backend (Python) receives file uploads and chat messages.
@@ -57,7 +57,7 @@ and admin panel. Hosted on Render (backend) and Vercel (frontend).
 - ANTHROPIC_API_KEY — from console.anthropic.com (NOT claude.ai login)
 - OPENAI_API_KEY — from platform.openai.com
 - SUPABASE_URL — from Supabase project settings
-- SUPABASE_KEY — from Supabase project settings (anon key)
+- SUPABASE_ANON_KEY — from Supabase project settings (anon key)
 
 ## Important note on two Claude accounts
 - claude.ai Pro → powers Claude Code, your build tool
