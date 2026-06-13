@@ -9,10 +9,11 @@ Pure native agent system — no external orchestrators.
 
 ## Current status
 [UPDATE WITH /log AT END OF EVERY SESSION]
-- Phase: 1 — Section 2 complete
-- Last completed: Python 3.11 venv (backend\.venv), all packages installed, all 3 APIs PASS. Committed & pushed.
-- Next task: Section 3 — Supabase database setup in browser
-- Blocking issues: backend/.env.example not yet created — do this alongside Section 3
+## Current status
+- Phase: 1 — Section 3 COMPLETE
+- Last completed: Section 3 fully done — Supabase project created (ClarivIX org), pgvector enabled, all 4 tables created (documents, chunks, conversations, messages), ivfflat index created, search_chunks() function created and verified, database_schema.sql committed and pushed (217ff98)
+- Next task: Section 4 — FastAPI skeleton (main.py health endpoint + config.py)
+- Blocking issues: none
 
 ## Architecture in one paragraph
 FastAPI backend (Python) receives file uploads and chat messages.
