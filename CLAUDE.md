@@ -7,8 +7,7 @@ Claude API answers using ONLY the uploaded documents — no hallucination.
 Built on Windows 11 · VS Code · Claude Code terminal only.
 Pure native agent system — no external orchestrators.
 
-## Current status
-[UPDATE WITH /log AT END OF EVERY SESSION]
+
 ## Current status
 - Phase: 1 — Section 3 COMPLETE
 - Last completed: Section 3 fully done — Supabase project created (ClarivIX org), pgvector enabled, all 4 tables created (documents, chunks, conversations, messages), ivfflat index created, search_chunks() function created and verified, database_schema.sql committed and pushed (217ff98)

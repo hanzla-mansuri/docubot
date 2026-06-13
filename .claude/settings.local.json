@@ -4,7 +4,8 @@
       "Bash(Test-Path *)",
       "Bash(powershell *)",
       "Bash(mkdir -p \"/c/Users/hanzl/.claude/logs/summaries\")",
-      "Read(//c/Users/hanzl/.claude/logs/summaries/**)"
+      "Read(//c/Users/hanzl/.claude/logs/summaries/**)",
+      "Bash(git *)"
     ]
   }
 }
