@@ -43,6 +43,9 @@ class Settings(BaseSettings):
     # Literal restricts LOG_LEVEL to exactly these four values — anything else is a startup error
     LOG_LEVEL: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
     APP_VERSION: str = "0.1.0"
+    # Maximum upload size in megabytes — multiplied by 1024*1024 in ingestion.py.
+    # Override in .env: MAX_FILE_SIZE_MB=20
+    MAX_FILE_SIZE_MB: int = 20
 
 
 # Module-level singleton — Settings() is called once at startup, not once per request.
