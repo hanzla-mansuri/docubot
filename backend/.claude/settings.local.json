@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python.exe -c \"from services.ingestion import chunk_text, ENCODER; print\\('Import OK'\\); print\\('ENCODER type:', type\\(ENCODER\\).__name__\\)\")",
+      "Bash(.venv/Scripts/python.exe -c \"from services.ingestion import chunk_text; chunks = chunk_text\\('This is a sentence. ' * 200\\); print\\(len\\(chunks\\), 'chunks — OK'\\)\")",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_ingestion.py -v --tb=short)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_ingestion.py -v --tb=no -q)"
+    ]
+  }
+}
