@@ -9,9 +9,9 @@ Pure native agent system — no external orchestrators.
 
 
 ## Current status
-- Phase: 1 — Section 3 COMPLETE
-- Last completed: Section 3 fully done — Supabase project created (ClarivIX org), pgvector enabled, all 4 tables created (documents, chunks, conversations, messages), ivfflat index created, search_chunks() function created and verified, database_schema.sql committed and pushed (217ff98)
-- Next task: Section 4 — FastAPI skeleton (main.py health endpoint + config.py)
+- Phase: 1 — Section 5 IN PROGRESS (~48% of Phase 1 done)
+- Last completed: parse_document() — full spec/eval/code/review/secure/test cycle. Committed ab87dc6 to master. Files: backend/services/__init__.py, backend/services/ingestion.py (parse_document + _parse_pdf + _parse_txt), backend/tests/test_ingestion.py (22 tests). config.py updated with MAX_FILE_SIZE_MB=20. Security hardening: null byte stripping, magic bytes check, per-page decompression bomb short-circuit, BytesIO context manager.
+- Next task: chunk_text() function in backend/services/ingestion.py — split plain text into overlapping chunks using tiktoken. Run /spec first. Then embed_chunks() calling OpenAI text-embedding-3-small, then POST /documents/upload route wiring everything together.
 - Blocking issues: none
 
 ## Architecture in one paragraph
