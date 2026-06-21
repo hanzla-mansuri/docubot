@@ -4,6 +4,16 @@ specification. Do not write any code.
 
 Feature: $ARGUMENTS
 
+After generating the spec, save it as a Markdown file in `projectdocs\specs\`.
+Derive the filename from the feature name using kebab-case, e.g.
+`section-5.4-chunk-storage.md`. Include a header block at the top of the file:
+```
+# Spec: <feature name>
+# Date: <today's date>
+# Status: Approved — ready for /eval
+```
+Tell the user the file path after saving.
+
 Output exactly these sections:
 
 ## Summary

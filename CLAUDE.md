@@ -9,9 +9,9 @@ Pure native agent system — no external orchestrators.
 
 
 ## Current status
-- Phase: 1 — Section 5 IN PROGRESS (~48% of Phase 1 done)
-- Last completed: parse_document() — full spec/eval/code/review/secure/test cycle. Committed ab87dc6 to master. Files: backend/services/__init__.py, backend/services/ingestion.py (parse_document + _parse_pdf + _parse_txt), backend/tests/test_ingestion.py (22 tests). config.py updated with MAX_FILE_SIZE_MB=20. Security hardening: null byte stripping, magic bytes check, per-page decompression bomb short-circuit, BytesIO context manager.
-- Next task: chunk_text() function in backend/services/ingestion.py — split plain text into overlapping chunks using tiktoken. Run /spec first. Then embed_chunks() calling OpenAI text-embedding-3-small, then POST /documents/upload route wiring everything together.
+- Phase: 1 — Section 5 IN PROGRESS (~78% of Phase 1 done)
+- Last completed: store_document() + store_chunks() + _cleanup_document() + DatabaseError — full spec/eval/code/review/test/secure cycle. Files: backend/services/database.py (store_document, store_chunks, _cleanup_document, DatabaseError, _validate_filename), backend/tests/test_services_database.py (41 tests). pytest.ini updated with filterwarnings. Total suite: 191 tests passing. Key decisions: Option B atomic RPC (finalize_document stored procedure), batch inserts ≤100 rows, float32 cast via numpy, post-RPC count verification, _cleanup_document swallows own exceptions. Security: S-01 raw Supabase errors logged not raised, S-02 filename path-traversal/null-byte validation.
+- Next task: POST /documents/upload route in backend/routers/documents.py — wire parse_document() → chunk_text() → embed_texts() → store_document() → store_chunks(), asyncio.to_thread() for sync functions, slowapi rate limit (5/minute), Content-Length check, _cleanup_document() in error path. Also: create finalize_document RPC + UNIQUE constraint + idx_chunks_document_id in Supabase before testing. Run /spec first.
 - Blocking issues: none
 
 ## Architecture in one paragraph
